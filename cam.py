@@ -2,6 +2,8 @@
 import cv2
 import numpy as np
 i=0
+
+#DEFINING CAPTURE ACTION
 def capturing(event,x,y,flags,param):
     global i
     if event==cv2.EVENT_LBUTTONUP:
@@ -16,6 +18,7 @@ def capturing(event,x,y,flags,param):
         cv2.waitKey(1000)
         cv2.destroyWindow(wname)
 
+#WEBCAM ACCESSING
 cap=cv2.VideoCapture(0)
 while True:
     ret,frame = cap.read()
