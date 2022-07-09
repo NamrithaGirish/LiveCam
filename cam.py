@@ -3,7 +3,6 @@ import cv2
 import numpy as np
 i=0
 
-#DEFINING CAPTURE ACTION
 def capturing(event,x,y,flags,param):
     global i
     if event==cv2.EVENT_LBUTTONUP:
@@ -18,7 +17,7 @@ def capturing(event,x,y,flags,param):
         cv2.waitKey(1000)
         cv2.destroyWindow(wname)
 
-#WEBCAM ACCESSING
+
 cap=cv2.VideoCapture(0)
 while True:
     ret,frame = cap.read()
@@ -30,7 +29,7 @@ while True:
     cv2.putText(img,"CLICK",(35,65),cv2.FONT_HERSHEY_SIMPLEX,0.85,(255,255,255),2,cv2.LINE_AA)
     cv2.putText(img,"HERE",(35,90),cv2.FONT_HERSHEY_SIMPLEX,0.85,(255,255,255),2,cv2.LINE_AA)
     cv2.imshow(win,img)
-    cv2.moveWindow(win,250,600)
+    cv2.moveWindow(win,250,560)
     cv2.setMouseCallback(win,capturing)
     if cv2.waitKey(1)==13:
         break
