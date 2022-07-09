@@ -16,7 +16,6 @@ def capturing(event,x,y,flags,param):
         cv2.waitKey(1000)
         cv2.destroyWindow(wname)
 
-
 cap=cv2.VideoCapture(0)
 while True:
     ret,frame = cap.read()
