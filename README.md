@@ -1,2 +1,2 @@
 # LiveCam
-Creating a live camera using numpy and opencv modules
+Creating a live camera model using numpy and opencv modules
